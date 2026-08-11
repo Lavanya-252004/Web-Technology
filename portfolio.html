@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lavanya C | Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+
+/* Navigation */
+
+nav{
+    background:#1b263b;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+nav h2{
+    color:white;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+
+/* Hero */
+
+.hero{
+    background:#243b55;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px;
+    gap:50px;
+}
+
+
+.hero img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+}
+
+
+.hero h1{
+    font-size:45px;
+}
+
+
+.hero h3{
+    color:#ffd166;
+    margin:10px 0;
+}
+
+
+.btn{
+
+    background:#ffd166;
+    color:black;
+    padding:12px 25px;
+    border-radius:25px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:15px;
+
+}
+
+
+
+/* Sections */
+
+section{
+
+    width:85%;
+    margin:40px auto;
+
+}
+
+
+.title{
+
+    text-align:center;
+    color:#243b55;
+    margin-bottom:25px;
+
+}
+
+
+
+.card{
+
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    margin-bottom:20px;
+
+}
+
+
+
+/* Skills */
+
+.skills{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+
+}
+
+
+.skills span{
+
+    background:#243b55;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+
+}
+
+
+
+/* Projects */
+
+.project{
+
+    border-left:5px solid #243b55;
+    padding:20px;
+    background:#fafafa;
+    margin-bottom:15px;
+
+}
+
+
+
+.project h3{
+
+    color:#243b55;
+
+}
+
+
+
+ul{
+
+    margin-left:20px;
+    line-height:1.8;
+
+}
+
+
+
+/* Contact */
+
+.contact{
+
+    text-align:center;
+
+}
+
+
+footer{
+
+    background:#1b263b;
+    color:white;
+    text-align:center;
+    padding:15px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- Navigation -->
+
+<nav>
+
+<h2>Lavanya C</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+
+<!-- Hero Section -->
+
+<div class="hero">
+
+<img src="C:\Users\CSE\Downloads\cv.jpg">
+
+
+<div>
+
+<h1>Lavanya C</h1>
+
+<h3>Computer Science Graduate</h3>
+
+
+<p>
+Web Developer | Blockchain Enthusiast | Problem Solver
+</p>
+
+
+<a class="btn" href="#contact">
+Hire Me
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- About -->
+
+<section id="about">
+
+<h1 class="title">
+About Me
+</h1>
+
+
+<div class="card">
+
+<p>
+I am a Computer Science graduate passionate about web development,
+database management, and emerging technologies like blockchain.
+I enjoy creating innovative solutions, solving real-world problems,
+and continuously improving my technical skills.
+</p>
+
+
+<br>
+
+
+<p>
+I have developed projects including a blockchain-based counterfeit
+detection system for product authentication and responsive portfolio
+websites. I am looking for an opportunity where I can contribute my
+skills and grow as a software professional.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Education -->
+
+
+<section>
+
+
+<h1 class="title">
+Education
+</h1>
+
+
+<div class="card">
+
+<h3>Bharathidasan Govt College for Women</h3>
+
+<p>
+BSC Computer Science (2022 - 2025)
+</p>
+
+
+<br>
+
+
+<h3>Vivekanandha Hr Sec School</h3>
+
+<p>
+Higher Secondary (2020 - 2022)
+</p>
+
+<br>
+
+<h3>Pondicherry University</h3>
+
+<p>
+Master of Computer Applications(2025 - 2027)
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Skills -->
+
+
+<section id="skills">
+
+
+<h1 class="title">
+Technical Skills
+</h1>
+
+
+<div class="card skills">
+
+<span>C#</span>
+<span>C</span>
+<span>Python </span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Database Management</span>
+<span>Operating System</span>
+<span>Blockchain</span>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- Projects -->
+
+
+<section id="projects">
+
+
+<h1 class="title">
+Projects
+</h1>
+
+
+
+<div class="card project">
+
+
+<h3>
+Counterfeit Detection using Blockchain
+</h3>
+
+
+<p>
+
+Developed a blockchain-based system for verifying product authenticity
+and detecting counterfeit goods using Blockchain, HTML, CSS, JavaScript, Database Management.
+</p>
+
+
+
+</div>
+
+
+
+
+<div class="card project">
+
+
+<h3>
+Resume shortlisting using MYSQL
+</h3>
+
+
+<p>
+Designed and developed a Resume shortlisting system using MYSQL to automate the process of filtering and selecting suitable candidate for a job position.
+</p>
+
+
+</div>
+
+<div class="card project">
+
+
+<h3>
+Metasploit exploitation attack
+</h3>
+
+
+<p>
+Performed vulnerability assessment and controlled exploitation using Kali Linux, Metasploit, and Nmap in a virtual lab environment.
+
+
+</div>
+
+
+
+
+
+<div class="card project">
+
+
+<h3>
+E-Commerce Customer Support Chat
+</h3>
+
+
+<p>
+Developed an E-Commerce customer support chatbot to automate responses to common customer queries in an online retail environment.
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- Certifications -->
+
+
+<section>
+
+
+<h1 class="title">
+Certifications & Achievements
+</h1>
+
+
+<div class="card">
+
+
+<ul>
+
+<li>SMVEC Technical Symposium in Artificial Intelligence</li>
+
+<li>French Certification - A1, A2, B1</li>
+
+<li>Distinction in Lower Hand English Typewriting</li>
+
+<li>First Class in Senior English Typewriting</li>
+
+<li>Distinction in Lower Tamil Typewriting</li>
+
+<li>First Class in Senior Tamil Typewriting</li>
+
+
+</ul>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- Contact -->
+
+
+<section id="contact">
+
+
+<h1 class="title">
+Contact
+</h1>
+
+
+<div class="card contact">
+
+
+<p>📞 +91 9894272724</p>
+
+<p>📧 lavanyaaa@gmail.com</p>
+
+<p>
+📍 Puducherry, India
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2025 Lavanya C | Professional Portfolio
+
+</footer>
+
+
+
+<script>
+
+function contact(){
+
+alert("Thank you for visiting my portfolio!");
+
+}
+
+</script>
+
+
+</body>
+
+</html>
