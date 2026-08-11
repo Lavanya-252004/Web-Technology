@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GK QUIZ</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:700px;
+    max-width:100%;
+    background:#1f2937;
+    color:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(34,197,94,.35);
+}
+
+h1{
+    text-align:center;
+    color:#22c55e;
+    margin-bottom:20px;
+}
+
+#question-number{
+    color:#9ca3af;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+#question{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.btn{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    background:#374151;
+    color:white;
+    cursor:pointer;
+    text-align:left;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#4b5563;
+}
+
+.correct{
+    background:#16a34a !important;
+}
+
+.wrong{
+    background:#dc2626 !important;
+}
+
+#next-btn,
+#restart-btn{
+    width:100%;
+    padding:14px;
+    margin-top:20px;
+    border:none;
+    border-radius:8px;
+    background:#22c55e;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    display:none;
+    transition:0.3s;
+}
+
+#next-btn:hover,
+#restart-btn:hover{
+    background:#15803d;
+}
+
+#result{
+    display:none;
+    text-align:center;
+}
+
+#final-score{
+    line-height:1.8;
+}
+
+@media(max-width:600px){
+
+.container{
+padding:20px;
+}
+
+#question{
+font-size:18px;
+}
+
+.btn{
+font-size:15px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>GK QUIZ</h1>
+
+<div id="quiz">
+
+<p id="question-number"></p>
+
+<h2 id="question"></h2>
+
+<div id="answer-buttons"></div>
+
+<button id="next-btn">Next Question</button>
+
+</div>
+
+<div id="result">
+
+<h2 id="final-score"></h2>
+
+<button id="restart-btn">Restart Quiz</button>
+
+</div>
+
+</div>
+
+<script>
+
+const questions = [
+
+{
+question:"What is the capital of France?",
+answers:[
+{text:"London",correct:false},
+{text:"Berlin",correct:false},
+{text:"Paris",correct:true},
+{text:"Rome",correct:false}
+]
+},
+
+{
+question:"Which planet is known as the Red Planet?",
+answers:[
+{text:"Venus",correct:false},
+{text:"Mars",correct:true},
+{text:"Jupiter",correct:false},
+{text:"Earth",correct:false}
+]
+},
+
+{
+question:"HTML stands for?",
+answers:[
+{text:"Home Tool Markup Language",correct:false},
+{text:"Hyper Text Markup Language",correct:true},
+{text:"High Text Machine Language",correct:false},
+{text:"Hyper Transfer Markup Language",correct:false}
+]
+},
+
+{
+question:"CSS is mainly used for?",
+answers:[
+{text:"Programming",correct:false},
+{text:"Networking",correct:false},
+{text:"Styling web pages",correct:true},
+{text:"Creating databases",correct:false}
+]
+},
+
+{
+question:"JavaScript is mainly used for?",
+answers:[
+{text:"Editing videos",correct:false},
+{text:"Creating databases",correct:false},
+{text:"Making web pages interactive",correct:true},
+{text:"Designing logos",correct:false}
+]
+},
+
+{
+question:"Which is the largest ocean?",
+answers:[
+{text:"Atlantic Ocean",correct:false},
+{text:"Indian Ocean",correct:false},
+{text:"Arctic Ocean",correct:false},
+{text:"Pacific Ocean",correct:true}
+]
+},
+
+{
+question:"Who invented the telephone?",
+answers:[
+{text:"Thomas Edison",correct:false},
+{text:"Alexander Graham Bell",correct:true},
+{text:"Albert Einstein",correct:false},
+{text:"Isaac Newton",correct:false}
+]
+},
+
+{
+question:"Which language runs inside a web browser?",
+answers:[
+{text:"Python",correct:false},
+{text:"Java",correct:false},
+{text:"JavaScript",correct:true},
+{text:"C++",correct:false}
+]
+},
+
+{
+question:"What is 5 × 8 ?",
+answers:[
+{text:"35",correct:false},
+{text:"50",correct:false},
+{text:"40",correct:true},
+{text:"45",correct:false}
+]
+},
+
+{
+question:"Which country is known as the Land of the Rising Sun?",
+answers:[
+{text:"China",correct:false},
+{text:"Japan",correct:true},
+{text:"Thailand",correct:false},
+{text:"India",correct:false}
+]
+},
+
+{
+question:"What is H₂O commonly known as?",
+answers:[
+{text:"Oxygen",correct:false},
+{text:"Helium",correct:false},
+{text:"Water",correct:true},
+{text:"Hydrogen",correct:false}
+]
+},
+
+{
+question:"Which is the largest mammal?",
+answers:[
+{text:"Elephant",correct:false},
+{text:"Tiger",correct:false},
+{text:"Blue Whale",correct:true},
+{text:"Giraffe",correct:false}
+]
+},
+
+{
+question:"Which HTML tag creates a hyperlink?",
+answers:[
+{text:"img",correct:false},
+{text:"p",correct:false},
+{text:"a",correct:true},
+{text:"h1",correct:false}
+]
+},
+
+{
+question:"Which symbol is used for single-line comments in JavaScript?",
+answers:[
+{text:"<!-- -->",correct:false},
+{text:"**",correct:false},
+{text:"//",correct:true},
+{text:"#",correct:false}
+]
+},
+
+{
+question:"Plants absorb which gas?",
+answers:[
+{text:"Nitrogen",correct:false},
+{text:"Oxygen",correct:false},
+{text:"Hydrogen",correct:false},
+{text:"Carbon Dioxide",correct:true}
+]
+},
+
+{
+question:"Which is the smallest prime number?",
+answers:[
+{text:"3",correct:false},
+{text:"1",correct:false},
+{text:"5",correct:false},
+{text:"2",correct:true}
+]
+},
+
+{
+question:"Egypt is located in which continent?",
+answers:[
+{text:"Europe",correct:false},
+{text:"Africa",correct:true},
+{text:"Australia",correct:false},
+{text:"Asia",correct:false}
+]
+},
+
+{
+question:"Java was originally developed by?",
+answers:[
+{text:"Google",correct:false},
+{text:"Apple",correct:false},
+{text:"Sun Microsystems",correct:true},
+{text:"Microsoft",correct:false}
+]
+},
+
+{
+question:"Which planet is famous for its rings?",
+answers:[
+{text:"Earth",correct:false},
+{text:"Venus",correct:false},
+{text:"Saturn",correct:true},
+{text:"Mars",correct:false}
+]
+},
+
+{
+question:"CPU stands for?",
+answers:[
+{text:"Computer Program Unit",correct:false},
+{text:"Central Program Utility",correct:false},
+{text:"Central Processing Unit",correct:true},
+{text:"Computer Processing Utility",correct:false}
+]
+}
+
+];
+
+
+const questionNumber=document.getElementById("question-number");
+const question=document.getElementById("question");
+const answerButtons=document.getElementById("answer-buttons");
+const nextBtn=document.getElementById("next-btn");
+const result=document.getElementById("result");
+const finalScore=document.getElementById("final-score");
+const restartBtn=document.getElementById("restart-btn");
+
+let currentQuestion=0;
+let score=0;
+
+function startQuiz(){
+currentQuestion=0;
+score=0;
+result.style.display="none";
+document.getElementById("quiz").style.display="block";
+showQuestion();
+}
+
+function showQuestion(){
+
+resetState();
+
+let current=questions[currentQuestion];
+
+questionNumber.textContent=`Question ${currentQuestion+1} of ${questions.length}`;
+
+question.textContent=current.question;
+
+current.answers.forEach(answer=>{
+
+const button=document.createElement("button");
+
+button.textContent=answer.text;
+
+button.classList.add("btn");
+
+button.dataset.correct=answer.correct;
+
+button.addEventListener("click",selectAnswer);
+
+answerButtons.appendChild(button);
+
+});
+
+}
+
+function resetState(){
+
+nextBtn.style.display="none";
+
+while(answerButtons.firstChild){
+answerButtons.removeChild(answerButtons.firstChild);
+}
+
+}
+
+function selectAnswer(e){
+
+const selected=e.target;
+
+const isCorrect=selected.dataset.correct==="true";
+
+if(isCorrect){
+score++;
+selected.classList.add("correct");
+}
+else{
+selected.classList.add("wrong");
+}
+
+Array.from(answerButtons.children).forEach(button=>{
+
+button.disabled=true;
+
+if(button.dataset.correct==="true"){
+button.classList.add("correct");
+}
+
+});
+
+nextBtn.style.display="block";
+
+}
+
+nextBtn.addEventListener("click",()=>{
+
+currentQuestion++;
+
+if(currentQuestion<questions.length){
+showQuestion();
+}
+else{
+showResult();
+}
+
+});
+
+function showResult(){
+
+document.getElementById("quiz").style.display="none";
+
+result.style.display="block";
+
+let percentage=((score/questions.length)*100).toFixed(0);
+
+finalScore.innerHTML=`
+🎉 <h2>Quiz Completed!</h2>
+<br>
+<h3>Your Score: ${score} / ${questions.length}</h3>
+<br>
+<h3>Percentage: ${percentage}%</h3>
+`;
+
+restartBtn.style.display="block";
+
+}
+
+restartBtn.addEventListener("click",startQuiz);
+
+startQuiz();
+
+
+</script>
+
+</body>
+</html>
