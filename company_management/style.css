@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+header {
+    height: 70px;
+    padding: 0 8%;
+    background: #0b1f3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffb703;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #ffb703;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 90px 10%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #0b1f3a, #1976a8);
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-text p {
+    color: #ffb703;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    font-size: 50px;
+    line-height: 1.2;
+    color: white;
+}
+
+.hero span {
+    color: #e5e7eb;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 13px 28px;
+    background: #ffb703;
+    color: #0b1f3a;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.hero a:hover {
+    background: #ffd166;
+}
+
+/* Services */
+
+.services {
+    padding: 70px 8%;
+    text-align: center;
+    background: white;
+}
+
+.services h2 {
+    color: #0b1f3a;
+    font-size: 32px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.card {
+    width: 30%;
+    padding: 30px;
+    background: #f8fafc;
+    border: 1px solid #ddd;
+    border-top: 4px solid #ffb703;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #ddd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #1976a8;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* About */
+
+.about {
+    padding: 70px 15%;
+    text-align: center;
+    background: #e8f1f8;
+}
+
+.about h2 {
+    color: #0b1f3a;
+    font-size: 32px;
+}
+
+.about p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Footer */
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: #0b1f3a;
+    color: white;
+}
+
+
+/* =========================
+   REGISTER PAGE
+========================= */
+
+.box {
+    width: 420px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #ccc;
+}
+
+.box h1 {
+    text-align: center;
+    color: #1976a8;
+}
+
+.box > p {
+    text-align: center;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1976a8;
+}
+
+.pass {
+    display: flex;
+}
+
+.pass input {
+    border-radius: 6px 0 0 6px;
+}
+
+.pass button {
+    width: 65px;
+    border: 0;
+    background: #ddd;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+.register {
+    width: 100%;
+    margin-top: 22px;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    background: #1976a8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register:hover {
+    background: #125b82;
+}
+
+#strength {
+    display: block;
+    margin-top: 5px;
+    color: #1976a8;
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #ccc;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #0b1f3a;
+}
+
+.login-box input {
+    margin-top: 12px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    background: #1976a8;
+    color: white;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #125b82;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+/* Dashboard Welcome */
+
+.welcome {
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    background: linear-gradient(120deg, #0b1f3a, #1976a8);
+    color: white;
+}
+
+.welcome h1 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.welcome p {
+    color: #dbeafe;
+}
+
+.role {
+    display: inline-block;
+    padding: 7px 18px;
+    background: #ffb703;
+    color: #0b1f3a;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Dashboard Card */
+
+.dashboard .card {
+    width: 100%;
+    padding: 25px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #ddd;
+    overflow-x: auto;
+}
+
+.dashboard .card h2 {
+    margin-top: 0;
+    color: #0b1f3a;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 14px;
+    text-align: left;
+    background: #0b1f3a;
+    color: white;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f1f7fc;
+}
+
+/* Role Badge */
+
+.badge {
+    padding: 6px 12px;
+    background: #dbeafe;
+    color: #1976a8;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Logout */
+
+.logout {
+    margin-left: 20px;
+    padding: 9px 18px;
+    background: #e63946;
+    color: white;
+    border-radius: 5px;
+}
+
+.logout:hover {
+    background: #c1121f;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 8%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .box,
+    .login-box {
+        width: 90%;
+    }
+
+    .dashboard {
+        width: 95%;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
