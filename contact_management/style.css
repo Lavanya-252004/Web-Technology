@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+    padding: 30px;
+}
+
+.container,
+.form-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.btn,
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ebe2e2;
+    text-align: center;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+.edit {
+    color: green;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.delete {
+    color: red;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    margin-top: 15px;
+}
+
+.form-container {
+    max-width: 500px;
+}
+
+.form-container a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+.error {
+    color: red;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
