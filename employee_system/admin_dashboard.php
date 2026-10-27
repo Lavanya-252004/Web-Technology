@@ -1,0 +1,1 @@
+<?php require 'C:/xampp/htdocs/employee_system/admin_dashboard.php';
