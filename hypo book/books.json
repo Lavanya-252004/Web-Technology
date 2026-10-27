@@ -1,0 +1,53 @@
+
+[
+    {
+        "id": 1,
+        "title": "The Jungle Book",
+        "price": 250
+    },
+    {
+        "id": 2,
+        "title": "Alice in Wonderland",
+        "price": 300
+    },
+    {
+        "id": 3,
+        "title": "The Little Prince",
+        "price": 220
+    },
+    {
+        "id": 4,
+        "title": "Treasure Island",
+        "price": 280
+    },
+    {
+        "id": 5,
+        "title": "Peter Pan",
+        "price": 240
+    },
+    {
+        "id": 6,
+        "title": "Cinderella",
+        "price": 150
+    },
+    {
+        "id": 7,
+        "title": "Snow White",
+        "price": 180
+    },
+    {
+        "id": 8,
+        "title": "Pinocchio",
+        "price": 200
+    },
+    {
+        "id": 9,
+        "title": "The Secret Garden",
+        "price": 270
+    },
+    {
+        "id": 10,
+        "title": "Around the World in 80 Days",
+        "price": 350
+    }
+]
