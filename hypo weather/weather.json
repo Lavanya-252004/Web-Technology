@@ -1,0 +1,54 @@
+{
+    "cities": [
+        {
+            "city": "Chennai",
+            "temperature": 32,
+            "humidity": 65
+        },
+        {
+            "city": "Mumbai",
+            "temperature": 30,
+            "humidity": 75
+        },
+        {
+            "city": "Delhi",
+            "temperature": 28,
+            "humidity": 50
+        },
+        {
+            "city": "Bangalore",
+            "temperature": 24,
+            "humidity": 60
+        },
+        {
+            "city": "Hyderabad",
+            "temperature": 31,
+            "humidity": 45
+        },
+        {
+            "city": "Kolkata",
+            "temperature": 29,
+            "humidity": 80
+        },
+        {
+            "city": "Pune",
+            "temperature": 27,
+            "humidity": 55
+        },
+        {
+            "city": "Coimbatore",
+            "temperature": 29,
+            "humidity": 65
+        },
+        {
+            "city": "Madurai",
+            "temperature": 34,
+            "humidity": 50
+        },
+        {
+            "city": "Puducherry",
+            "temperature": 32,
+            "humidity": 57
+        }
+    ]
+}
